@@ -1,0 +1,55 @@
+openapi: "3.0.0"
+info:
+  title: OpenWeatherMap API
+  version: 1.0.0
+  description: Weather date API documentation
+  
+paths:
+  /weather:
+    servers:
+      - url: https://api.openweathermap.org/data/2.5
+    get:
+      summary: Get current weather data
+      parameters:
+        - name: q
+          in: query
+          required: true
+          schema:
+            type: string
+          description: City name (e.g., trichy)
+        - name: appid
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Your API key
+      responses:
+        '200':
+          description: Successful response
+        '401':
+          description: Invalid API key
+          
+  /forecast:
+    servers:
+      - url: https://api.openweathermap.org/data/2.5
+    get:
+      summary: Get 5-Day Forecast by city
+      parameters:
+        - name: q
+          in: query
+          required: true
+          schema:
+            type: string
+          description: city name (e.g., trichy)    
+        - name: appid
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Your API key
+      responses:
+        '200':
+          description: Successful response
+        '401':
+          description: Invalide API key
+          
