@@ -1,4 +1,11 @@
-/forecast:
+openapi: "3.0.0"
+info:
+  title: OpenWeatherMap API
+  version: 1.0.0
+  description: Weather date API documentation
+  
+paths:
+  /forecast:
     servers:
       - url: https://api.openweathermap.org/data/2.5
     get:
@@ -21,4 +28,5 @@
           description: Successful response
         '401':
           description: Invalide API key
+  
           
