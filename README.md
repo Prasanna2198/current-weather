@@ -1,12 +1,15 @@
 # OpenWeatherMap API in Swagger docs
 
-This project converts key OpenWeatherMap endpoints into a well structured, human-readable OpenAPI format using Swagger.
+This project converts key OpenWeatherMap endpoints into a well-structured, human-readable OpenAPI format using Swagger.
 
 **Note:** You must sign up for an API key at [OpenWeatherMap](https://openweathermap.org/city/2643743)
 ---
 ## What's inside
 
-Endpoints, such as Weather [current-weather.yaml], Forecast [forecast.yam], and Geocoding (Direct/Reverse) [geocoding.yaml] endpoints are documented using Swagger.OpenAPI 3.0 specification
+The following YAML files contain OpenWeatherMap endpoint specifications written in Swagger/OpenAPI 3.0:
+- `current-weather.yaml`: Current weather data
+- `forecast.yaml`: 5-day/3-hour weather forecast
+- `geocoding.yaml`: Direct and Reverse Geocoding
 
 ---
 ## Platforms used
@@ -16,8 +19,8 @@ Endpoints, such as Weather [current-weather.yaml], Forecast [forecast.yam], and 
 
 ---
 ## How it works
-1. Open Swagger Editor(https://editor.swagger.io)
-2. Place the  content off yaml from OpenWeatherMap (`/Weather`, `/Forecast`, `/Geocoding`)
+1. Open [Swagger Editor](https://editor.swagger.io)
+2. Copy and paste the content of yaml from OpenWeatherMap (`/Weather`, `/Forecast`, `/Geocoding`)
 3. Add the actual OpenWeatherMap API key in the appid **query**, and the city name in the **q** query
 4. Send the request and observe the responses such as `200 OK` and `401 Unauthorized`
 
@@ -25,7 +28,7 @@ Endpoints, such as Weather [current-weather.yaml], Forecast [forecast.yam], and 
 ## Sample
 - City: `q=trichy`
 - API key: `appid=Your-API-key`
-- Latitude: `lat=0.7905`
+- Latitude: `lat=10.7905`
 - Longitude: `lon=78.7047`
 
 ---
